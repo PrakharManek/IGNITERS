@@ -1,0 +1,86 @@
+{
+  "demoProfile": {
+    "fullName": "Rajesh Kumar",
+    "age": 32,
+    "phone": "+91 98765 43210",
+    "emergencyContact": "+91 98765 43211",
+    "address": "Construction Site, Technopark, Thiruvananthapuram, Kerala",
+    "medicalHistory": "No known allergies. Previous minor injury to left hand in 2022.",
+    "workerType": "construction",
+    "language": "hi",
+    "lastUpdated": "2024-01-15T10:30:00.000Z"
+  },
+  "demoVitals": [
+    {
+      "bloodPressure": "120/80",
+      "heartRate": 72,
+      "temperature": 98.6,
+      "timestamp": "2024-01-15T08:00:00.000Z"
+    },
+    {
+      "bloodPressure": "118/78",
+      "heartRate": 75,
+      "temperature": 98.4,
+      "timestamp": "2024-01-14T08:00:00.000Z"
+    },
+    {
+      "bloodPressure": "122/82",
+      "heartRate": 70,
+      "temperature": 98.8,
+      "timestamp": "2024-01-13T08:00:00.000Z"
+    }
+  ],
+  "demoMedications": [
+    {
+      "name": "Paracetamol",
+      "dosage": "500mg",
+      "frequency": "as-needed",
+      "addedDate": "2024-01-10T10:00:00.000Z"
+    },
+    {
+      "name": "Multivitamin",
+      "dosage": "1 tablet",
+      "frequency": "once-daily",
+      "addedDate": "2024-01-05T10:00:00.000Z"
+    }
+  ],
+  "demoSymptoms": [
+    {
+      "description": "Mild headache after long work hours",
+      "severity": "4",
+      "timestamp": "2024-01-15T18:30:00.000Z"
+    },
+    {
+      "description": "Slight fatigue in the evening",
+      "severity": "3",
+      "timestamp": "2024-01-14T19:00:00.000Z"
+    }
+  ],
+  "sdgMetrics": {
+    "sdg3": {
+      "healthAccess": 1,
+      "healthEducation": 1,
+      "preventiveCare": 1,
+      "description": "Good Health and Well-being - Providing accessible healthcare to migrant workers"
+    },
+    "sdg10": {
+      "reducedInequalities": 1,
+      "inclusiveServices": 1,
+      "description": "Reduced Inequalities - Ensuring migrant workers have equal access to healthcare"
+    },
+    "sdg17": {
+      "partnerships": 1,
+      "dataSharing": 1,
+      "description": "Partnerships for the Goals - Collaborating with government and NGOs for migrant health"
+    }
+  },
+  "healthStatistics": {
+    "totalUsers": 1250,
+    "activeUsers": 890,
+    "emergencyCalls": 15,
+    "healthEducationCompletions": 340,
+    "vitalsLogged": 2100,
+    "medicationsTracked": 450,
+    "symptomsReported": 180
+  }
+}
