@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Migrant Health - Digital Health Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Migrant Health">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Kerala Migrant Health</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#health-tracker" class="nav-link">Health Tracker</a>
+                <a href="#emergency" class="nav-link">Emergency</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#profile" class="nav-link">Profile</a>
+            </div>
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 data-translate="hero-title">Digital Health Management for Migrant Workers</h1>
+                <p data-translate="hero-subtitle">Empowering migrant workers in Kerala with accessible, sustainable healthcare solutions aligned with UN Sustainable Development Goals</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openRegistration()">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-translate="register-now">Register Now</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('services')">
+                        <i class="fas fa-info-circle"></i>
+                        <span data-translate="learn-more">Learn More</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="health-illustration">
+                    <i class="fas fa-users"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sdg-badges">
+            <div class="sdg-badge" title="SDG 3: Good Health and Well-being">
+                <span>3</span>
+            </div>
+            <div class="sdg-badge" title="SDG 10: Reduced Inequalities">
+                <span>10</span>
+            </div>
+            <div class="sdg-badge" title="SDG 17: Partnerships for the Goals">
+                <span>17</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-translate="services-title">Our Health Services</h2>
+            <p data-translate="services-subtitle">Comprehensive healthcare solutions designed for migrant workers</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 data-translate="service-1-title">Health Registration</h3>
+                    <p data-translate="service-1-desc">Register your health profile and access personalized healthcare services</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-translate="service-2-title">Health Tracking</h3>
+                    <p data-translate="service-2-desc">Monitor your health metrics and track medical history</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3 data-translate="service-3-title">Emergency Services</h3>
+                    <p data-translate="service-3-desc">Quick access to emergency healthcare and SOS features</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-translate="service-4-title">Health Education</h3>
+                    <p data-translate="service-4-desc">Learn about preventive healthcare and healthy living</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-translate="service-5-title">Multilingual Support</h3>
+                    <p data-translate="service-5-desc">Access services in your preferred language</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-translate="service-6-title">Mobile Health</h3>
+                    <p data-translate="service-6-desc">Offline-capable mobile health solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tracker Section -->
+    <section id="health-tracker" class="health-tracker">
+        <div class="container">
+            <h2 data-translate="tracker-title">Health Tracker Dashboard</h2>
+            <div class="tracker-grid">
+                <div class="tracker-card">
+                    <h3 data-translate="vitals-title">Vital Signs</h3>
+                    <div class="vitals-form">
+                        <div class="form-group">
+                            <label data-translate="blood-pressure">Blood Pressure</label>
+                            <input type="text" placeholder="120/80" id="bloodPressure">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="heart-rate">Heart Rate</label>
+                            <input type="number" placeholder="72" id="heartRate">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="temperature">Temperature</label>
+                            <input type="number" placeholder="98.6" id="temperature">
+                        </div>
+                        <button class="btn btn-primary" onclick="saveVitals()">
+                            <i class="fas fa-save"></i>
+                            <span data-translate="save-vitals">Save Vitals</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tracker-card">
+                    <h3 data-translate="medications-title">Medications</h3>
+                    <div class="medication-form">
+                        <div class="form-group">
+                            <label data-translate="medication-name">Medication Name</label>
+                            <input type="text" id="medicationName">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="dosage">Dosage</label>
+                            <input type="text" id="dosage">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="frequency">Frequency</label>
+                            <select id="frequency">
+                                <option value="once-daily" data-translate="once-daily">Once Daily</option>
+                                <option value="twice-daily" data-translate="twice-daily">Twice Daily</option>
+                                <option value="three-times" data-translate="three-times">Three Times</option>
+                                <option value="as-needed" data-translate="as-needed">As Needed</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="addMedication()">
+                            <i class="fas fa-plus"></i>
+                            <span data-translate="add-medication">Add Medication</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tracker-card">
+                    <h3 data-translate="symptoms-title">Symptoms Log</h3>
+                    <div class="symptoms-form">
+                        <div class="form-group">
+                            <label data-translate="symptom-description">Symptom Description</label>
+                            <textarea id="symptomDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="severity">Severity (1-10)</label>
+                            <input type="range" min="1" max="10" id="severity">
+                            <span id="severityValue">5</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="logSymptom()">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span data-translate="log-symptom">Log Symptom</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section id="emergency" class="emergency">
+        <div class="container">
+            <h2 data-translate="emergency-title">Emergency Health Services</h2>
+            <div class="emergency-content">
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 data-translate="emergency-call">Emergency Call</h3>
+                    <p data-translate="emergency-call-desc">Direct access to emergency medical services</p>
+                    <button class="btn btn-emergency" onclick="makeEmergencyCall()">
+                        <i class="fas fa-phone"></i>
+                        <span data-translate="call-now">Call Now</span>
+                    </button>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-translate="nearest-hospital">Nearest Hospital</h3>
+                    <p data-translate="nearest-hospital-desc">Find the closest medical facility</p>
+                    <button class="btn btn-primary" onclick="findNearestHospital()">
+                        <i class="fas fa-search-location"></i>
+                        <span data-translate="find-hospital">Find Hospital</span>
+                    </button>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3 data-translate="telemedicine">Telemedicine</h3>
+                    <p data-translate="telemedicine-desc">Connect with healthcare professionals online</p>
+                    <button class="btn btn-primary" onclick="startTelemedicine()">
+                        <i class="fas fa-video"></i>
+                        <span data-translate="start-consultation">Start Consultation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 data-translate="education-title">Health Education & Awareness</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3 data-translate="preventive-care">Preventive Care</h3>
+                    <p data-translate="preventive-care-desc">Learn about disease prevention and healthy habits</p>
+                    <button class="btn btn-outline" onclick="openEducationModule('preventive')">
+                        <span data-translate="learn-more">Learn More</span>
+                    </button>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 data-translate="nutrition">Nutrition Guide</h3>
+                    <p data-translate="nutrition-desc">Healthy eating habits for migrant workers</p>
+                    <button class="btn btn-outline" onclick="openEducationModule('nutrition')">
+                        <span data-translate="learn-more">Learn More</span>
+                    </button>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 data-translate="physical-activity">Physical Activity</h3>
+                    <p data-translate="physical-activity-desc">Exercise routines for busy workers</p>
+                    <button class="btn btn-outline" onclick="openEducationModule('exercise')">
+                        <span data-translate="learn-more">Learn More</span>
+                    </button>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-translate="mental-health">Mental Health</h3>
+                    <p data-translate="mental-health-desc">Managing stress and mental well-being</p>
+                    <button class="btn btn-outline" onclick="openEducationModule('mental-health')">
+                        <span data-translate="learn-more">Learn More</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile">
+        <div class="container">
+            <h2 data-translate="profile-title">Your Health Profile</h2>
+            <div class="profile-content">
+                <div class="profile-form">
+                    <h3 data-translate="personal-info">Personal Information</h3>
+                    <form id="profileForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="full-name">Full Name</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="age">Age</label>
+                                <input type="number" id="age" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-translate="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="emergency-contact">Emergency Contact</label>
+                                <input type="tel" id="emergencyContact" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="address">Address in Kerala</label>
+                            <textarea id="address" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="medical-history">Medical History</label>
+                            <textarea id="medicalHistory" rows="4" placeholder="Any existing medical conditions, allergies, or previous surgeries"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i>
+                            <span data-translate="save-profile">Save Profile</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="profile-stats">
+                    <h3 data-translate="health-stats">Health Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <span class="stat-value" id="healthScore">85</span>
+                            <span class="stat-label" data-translate="health-score">Health Score</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-calendar-check"></i>
+                            <span class="stat-value" id="checkupsCompleted">12</span>
+                            <span class="stat-label" data-translate="checkups">Checkups</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-pills"></i>
+                            <span class="stat-value" id="medicationsActive">3</span>
+                            <span class="stat-label" data-translate="medications">Medications</span>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span class="stat-value" id="emergencyCalls">0</span>
+                            <span class="stat-label" data-translate="emergencies">Emergencies</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Demo Data Controls -->
+                    <div class="demo-controls">
+                        <h4>Demo Data</h4>
+                        <div class="demo-buttons">
+                            <button class="btn btn-outline" onclick="loadDemoData()">
+                                <i class="fas fa-download"></i>
+                                Load Demo Data
+                            </button>
+                            <button class="btn btn-outline" onclick="clearAllData()" style="background: #f44336; color: white; border-color: #f44336;">
+                                <i class="fas fa-trash"></i>
+                                Clear All Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer-title">Kerala Migrant Health</h3>
+                    <p data-translate="footer-desc">Empowering migrant workers with accessible healthcare solutions aligned with UN Sustainable Development Goals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="home">Home</a></li>
+                        <li><a href="#services" data-translate="services">Services</a></li>
+                        <li><a href="#emergency" data-translate="emergency">Emergency</a></li>
+                        <li><a href="#education" data-translate="education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="contact-info">Contact Information</h4>
+                    <p><i class="fas fa-phone"></i> +91 471 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> health@kerala.gov.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="sdg-alignment">SDG Alignment</h4>
+                    <div class="sdg-links">
+                        <a href="#" title="SDG 3: Good Health and Well-being">SDG 3</a>
+                        <a href="#" title="SDG 10: Reduced Inequalities">SDG 10</a>
+                        <a href="#" title="SDG 17: Partnerships for the Goals">SDG 17</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>All rights reserved.</p>
+                <p>Crafted with ❤ by Team IGNITERS in VIT Chennai</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegistration()">&times;</span>
+            <h2 data-translate="register-title">Register for Health Services</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label data-translate="full-name">Full Name *</label>
+                    <input type="text" id="regFullName" required>
+                </div>
+                <div class="form-group">
+                    <label data-translate="phone">Phone Number *</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                <div class="form-group">
+                    <label data-translate="language-preference">Language Preference</label>
+                    <select id="regLanguage">
+                        <option value="en">English</option>
+                        <option value="ml">മലയാളം</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-translate="worker-type">Type of Work</label>
+                    <select id="workerType">
+                        <option value="construction" data-translate="construction">Construction</option>
+                        <option value="agriculture" data-translate="agriculture">Agriculture</option>
+                        <option value="domestic" data-translate="domestic">Domestic Work</option>
+                        <option value="other" data-translate="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i>
+                    <span data-translate="complete-registration">Complete Registration</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
